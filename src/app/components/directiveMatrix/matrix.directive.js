@@ -22,7 +22,8 @@
     };
 
     /** @ngInject */
-    function matrixCtrl(_) {
+    function matrixCtrl(_,
+                        toastr) {
       var vm = this,
           errorInputArr = {};
 
@@ -40,6 +41,7 @@
         if (value == undefined) {
           errorInputArr[el] = true;
           vm.disableMultiplyMatrix = true;
+          toastr.error('Значение элементов массива может лежать в диапазоне от -99 до 100', 'Ошибка!');
         } else {
           if (errorInputArr[el]) {
             delete errorInputArr[el];
