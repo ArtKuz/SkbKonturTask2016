@@ -1,8 +1,9 @@
 СКБ Контур. Тестовое задание. FrontEnd
 ======================================
 
-[generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular)  
+[generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular)    
 
+[Результат](https://rawgit.com/ArtKuz/SkbKonturTask2016/master/dist/index.html)  
 
 ##Установка
 ```bash
