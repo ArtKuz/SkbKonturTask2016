@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="menu__col"
+       ng-class="{'menu__col--blue': vm.focus,
+                  'menu__col--red': vm.matrixError}">
+    <multiplication-matrix-btn class="menu__multiplication-matrix-btn"
+                               matrixes="vm.matrixes"
+                               matrix-error="vm.matrixError"
+                               disable-multiply-matrix="vm.disableMultiplyMatrix"
+                               result="vm.result"></multiplication-matrix-btn>
+    <clear-matrix-btn class="menu__clear-matrix-btn"
+                      matrixes="vm.matrixes"></clear-matrix-btn>
+    <reverse-matrix-btn class="menu__reverse-matrix-btn"
+                        matrixes="vm.matrixes"></reverse-matrix-btn>
+    <choose-matrix class="menu__choose-matrix"
+                   matrixes="vm.matrixes"></choose-matrix>
+    <div class="menu__error"
+         ng-if="vm.matrixError">
+      Такие матрицы нельзя перемножать, так как количество столбцов матрицы А не равно количеству строк матрицы B.
+    </div>
+  </div>
+  <div class="content-col">
+    <div class="content__multimatrix">
+      <result-matrix class="content__matrix"
+                     result="vm.result"></result-matrix>
+      <matrix class="content__matrix"
+              matrixes="vm.matrixes"
+              id="0"
+              disable-multiply-matrix="vm.disableMultiplyMatrix"
+              focus="vm.focus"></matrix>
+      <matrix matrixes="vm.matrixes"
+              id="1"
+              disable-multiply-matrix="vm.disableMultiplyMatrix"
+              focus="vm.focus"></matrix>
+    </div>
+  </div>
+</div>

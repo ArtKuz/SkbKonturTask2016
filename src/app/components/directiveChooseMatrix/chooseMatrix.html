@@ -1,0 +1,38 @@
+<div class="radio choose-matrix__radio-block">
+  <div class="choose-matrix__radio-block--element"
+       ng-repeat="matrix in vm.matrixes track by $index">
+    <input id="{{matrix.title}}"
+           type="radio"
+           name="choose-matrix"
+           value="{{matrix.title}}"
+           ng-click="vm.onActiveMatrixId($index)"
+           ng-checked="$index === 0">
+    <label for="{{matrix.title}}">
+      Матрица <span class="choose-matrix__radio-block--element-title">{{matrix.title}}</span>
+    </label>
+  </div>
+</div>
+
+<div class="choose-matrix__change">
+  <button ng-click="vm.onAddRow()"
+          ng-disabled="vm.disableAddRowBtn">
+    <i class="icon icon-plus"></i>Добавить
+  </button>
+  <button ng-click="vm.onRemoveRow()"
+          ng-disabled="vm.disableRemoveRowBtn">
+    <i class="icon icon-minus"></i>Удалить
+  </button>
+  <span class="choose-matrix__change--text">строку</span>
+</div>
+
+<div class="choose-matrix__change">
+  <button ng-click="vm.onAddColumn()"
+          ng-disabled="vm.disableAddColumnBtn">
+    <i class="icon icon-plus"></i>Добавить
+  </button>
+  <button ng-click="vm.onRemoveColumn()"
+          ng-disabled="vm.disableRemoveColumnBtn">
+    <i class="icon icon-minus"></i>Удалить
+  </button>
+  <span class="choose-matrix__change--text">столбец</span>
+</div>

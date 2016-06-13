@@ -1,0 +1,19 @@
+<div class="matrix__block">
+  <div class="matrix">
+    <div class="matrix__row" ng-repeat="(rowIndex, row) in vm.matrixes[vm.id].content track by $index">
+      <input type="number"
+             max="100"
+             ng-maxlength="3"
+             class="matrix__input"
+             placeholder="{{vm.matrixes[vm.id].title}}{{rowIndex + 1}},{{itemIndex + 1}}"
+             ng-model="vm.matrixes[vm.id].content[rowIndex][itemIndex]"
+             ng-focus="vm.onFocus()"
+             ng-blur="vm.onBlur()"
+             ng-change="vm.change(vm.matrixes[vm.id].content[rowIndex][itemIndex], rowIndex, itemIndex)"
+             ng-repeat="(itemIndex, item) in row  track by $index">
+    </div>
+  </div>
+  <div class="matrix__title">
+    {{vm.matrixes[vm.id].title}}
+  </div>
+</div>

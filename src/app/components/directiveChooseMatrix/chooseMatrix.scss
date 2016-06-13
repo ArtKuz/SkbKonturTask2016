@@ -1,0 +1,18 @@
+.choose-matrix {
+  &__radio-block {
+    margin: 0 0 17px;
+    &--element {
+      display: inline-block;
+      &-title {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__change {
+    margin: 10px 0;
+    letter-spacing: 10px;
+    &--text {
+      letter-spacing: normal;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.icon {
+  font: 500 14px "Icon";
+  padding: 0 5px 0 0;
+  &-clear:before {
+    content: "\e012";
+  }
+  &-reverse:before {
+    content: "\e01f";
+  }
+  &-plus:before {
+    content: "\e00d";
+  }
+  &-minus:before {
+    content: "\e01e";
+  }
+}

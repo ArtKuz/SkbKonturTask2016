@@ -1,0 +1,62 @@
+.row {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.content {
+  &-col {
+    min-height: 100%;
+    background: #fff;
+    position: relative;
+    overflow-y: scroll;
+  }
+  &__matrix {
+    display: inline-block;
+  }
+  &__multimatrix {
+    padding: 15px 0 0;
+  }
+}
+
+.menu {
+  &__col {
+    flex-basis: 270px;
+    min-width: 270px;
+    background: #bcbcbc;
+    padding: 0 33px 0;
+    transition: background 300ms linear 0s;
+    &--blue {
+      background: #5199db;
+    }
+    &--red {
+      background: #f6c1c0;
+    }
+  }
+  &__multiplication-matrix-btn,
+  &__clear-matrix-btn,
+  &__reverse-matrix-btn,
+  &__choose-matrix {
+    display: block;
+  }
+  &__multiplication-matrix-btn {
+    margin: 31px 0 56px;
+  },
+  &__clear-matrix-btn,
+  &__reverse-matrix-btn{
+    margin: 10px 0;
+  }
+  &__choose-matrix {
+    margin: 67px 0 0;
+  }
+  &__error {
+    color: #da0902;
+    margin: 50px 0;
+    width: 261px;
+  }
+}
+

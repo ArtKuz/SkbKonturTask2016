@@ -1,0 +1,12 @@
+<div class="result-matrix__block">
+  <div class="result-matrix">
+    <div class="result-matrix__row" ng-repeat="(rowIndex, row) in vm.result track by $index">
+      <input type="number"
+             class="result-matrix__input"
+             placeholder="c{{rowIndex + 1}},{{itemIndex + 1}}"
+             ng-model="vm.result[rowIndex][itemIndex]"
+             ng-repeat="(itemIndex, item) in row  track by $index"
+             disabled>
+    </div>
+  </div>
+</div>
